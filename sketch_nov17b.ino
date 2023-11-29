@@ -44,12 +44,11 @@ void loop() {
     isRaining = true;
     Serial.println("Hujan terdeteksi. Sistem diaktifkan.");
     Blynk.logEvent("rainalert");
-    waterlevel();
   } else {
     isRaining = false;
-    Serial.println("Tidak ada hujan. Sistem menunggu...");    
-    delay(10000);
+    Serial.println("Tidak ada hujan. Sistem menunggu...");
   }
+  waterlevel();
   delay(1000);
 }
 
